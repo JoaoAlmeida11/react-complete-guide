@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Person from './Person/Person';
 import './App.css';
 
+// statefull/smart/container vs stateless/dumb/presentational components
+
 const App = () => {
   const [personsState, setPersonsState] = useState({
     persons: [
