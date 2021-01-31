@@ -33,11 +33,22 @@ class App extends Component {
   };
 
   render() {
+    // has limitations like :hover but can be work around
+    const style = {
+      backgroundColor: 'white',
+      font: 'inhenrit',
+      border: '1px solid blue',
+      padding: '0.5rem',
+      cursor: 'pointer',
+    };
     return (
       <div className="App">
         <h1>Hi, I'm a React App</h1>
         {/* more efficient then () => this.switchNameHandler() ; use .bind */}
-        <button onClick={this.switchNameHandler.bind(this, 'Maximilian')}>
+        <button
+          style={style}
+          onClick={this.switchNameHandler.bind(this, 'Maximilian')}
+        >
           Switch Name
         </button>
         <Person
