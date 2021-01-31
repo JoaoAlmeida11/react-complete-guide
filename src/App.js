@@ -26,6 +26,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Hi, I'm a React App</h1>
+        {/* more efficient then () => this.switchNameHandler() ; use .bind */}
         <button onClick={this.switchNameHandler.bind(this, 'Maximilian')}>
           Switch Name
         </button>
